@@ -7,7 +7,7 @@
         android:padding="8dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="Autofill,LabelFor,TextFields"
+        tools:ignore="Autofill,LabelFor,TextFields,HardcodedText"
         tools:context=".MainActivity">
 
     <Button android:layout_width="match_parent"
@@ -28,13 +28,18 @@
                   android:layout_gravity="bottom"
                   android:text="@string/input"/>
 
-        <ImageView
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:drawableStart="@drawable/ic_content_paste_black_24dp"
+                  android:id="@+id/iv_past"
+                  android:text="past"
+                  android:layout_gravity="center"/>
+
+        <TextView
                 android:id="@+id/iv_clear"
                 android:layout_width="wrap_content" android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:src="@drawable/ic_delete_sweep_black_24dp" tools:ignore="ContentDescription"/>
+                android:text="clear"
+                android:drawableStart="@drawable/ic_delete_sweep_black_24dp" tools:ignore="ContentDescription"/>
     </FrameLayout>
 
     <EditText
@@ -45,7 +50,7 @@
             android:padding="8dp"
             tools:text="Hello World!"
             android:gravity="top"
-            android:layout_weight="1" />
+            android:layout_weight="1"/>
 
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:layout_marginTop="8dp"
@@ -70,7 +75,7 @@
               android:id="@+id/et_space"
               android:background="@drawable/rect"
               android:padding="8dp"
-              android:text="@string/hanzi_space"
+              android:text="    "
               android:layout_height="wrap_content"/>
 
     <TextView android:layout_width="match_parent"
@@ -82,6 +87,6 @@
               android:id="@+id/et_column_space"
               android:background="@drawable/rect"
               android:padding="8dp"
-              android:text="@string/column_space"
+              android:text="    "
               android:layout_height="wrap_content"/>
 </LinearLayout>

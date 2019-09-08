@@ -26,15 +26,21 @@ fun heng2shu(input: String, space: String = "    ", columnSpace: String = ""): S
     for (c in 0 until col) {
         for (r in 0 until row) {
             if (inputSplit[r].length > c) {
-                resultList[c] = resultList[c] + inputSplit[r].get(c) + columnSpace
+                resultList[c] = resultList[c] + inputSplit[r][c]
+                if (r < row - 1) {
+                    resultList[c] = resultList[c] + columnSpace
+                }
             } else {
                 resultList[c] = resultList[c] + space
             }
         }
     }
     val resultString = StringBuilder()
-    for (s in resultList) {
-        resultString.append(s).append("\n")
+    for (i in 0 until resultList.size) {
+        resultString.append(resultList[i])
+        if (i < resultList.size - 1) {
+            resultString.append("\n")
+        }
     }
     return resultString.toString()
 }

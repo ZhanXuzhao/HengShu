@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         et_space.addTextChangedListener(textWatcher)
         et_column_space.addTextChangedListener(textWatcher)
         iv_clear.setOnClickListener { et_input.setText("") }
+        iv_past.setOnClickListener { et_input.setText(getClipboardManager().primaryClip?.getItemAt(0)?.text) }
 
         btn_copy.setOnClickListener {
             clipOutput()
@@ -47,9 +48,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun clipOutput() {
-        val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        val clipboard = getClipboardManager()
         val clip = ClipData.newPlainText("", et_output.text)
         clipboard.primaryClip = clip
     }
+
+    private fun getClipboardManager() = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
 
 }
