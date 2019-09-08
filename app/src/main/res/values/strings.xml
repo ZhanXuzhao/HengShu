@@ -5,4 +5,7 @@
     <string name="space">space</string>
     <string name="input">input</string>
     <string name="output">output</string>
+    <string name="hanzi_space"/>
+    <string name="column_space"/>
+    <string name="column_space_hint">column space</string>
 </resources>
