@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_copy"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            android:textColor="#fff"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/copy"/>
+    <TextView android:layout_width="wrap_content"
+              android:layout_marginTop="8dp" android:layout_height="wrap_content"
+              android:text="@string/input"/>
+    <EditText
+            android:id="@+id/et_input"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/rect"
+            android:padding="8dp"
+            tools:text="Hello World!"
+            android:gravity="top"
+            android:layout_weight="1"/>
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:text="@string/output"/>
+
+    <EditText
+            android:id="@+id/et_output"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/rect"
+            android:gravity="top"
+            tools:text="Hello World!"
+            android:layout_weight="1"/>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_marginTop="8dp"
+              android:text="@string/space"
+              android:layout_height="wrap_content"/>
+
+    <EditText android:layout_width="match_parent"
+              android:id="@+id/et_space"
+              android:background="@drawable/rect"
+              android:padding="8dp"
+              android:text="    "
+              android:layout_height="wrap_content"/>
+</LinearLayout>

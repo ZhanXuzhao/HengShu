@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HengShu</string>
+    <string name="transfer">Transfer</string>
+    <string name="copy">Copy</string>
+    <string name="space">space</string>
+    <string name="input">input</string>
+    <string name="output">output</string>
+</resources>
